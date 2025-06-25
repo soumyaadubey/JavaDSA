@@ -25,6 +25,7 @@ public class Complexity{
             for (int j = i; j < n; j++) {
                 sum += i * j;
                 counter+=1;
+                System.out.println(sum);
             }
         }
         System.out.println(counter);
