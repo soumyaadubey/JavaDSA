@@ -17,7 +17,17 @@ public class Complexity{
         
     }
     public static void main(String[] args) {
-        num(10);
+        //num(10);
+        int n=10;
+        int sum = 0;
+        int counter=0;
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                sum += i * j;
+                counter+=1;
+            }
+        }
+        System.out.println(counter);
 
         
 

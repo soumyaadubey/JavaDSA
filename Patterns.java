@@ -158,7 +158,20 @@ public class Patterns {
             System.out.println();
         }
     }
+    public static void pattern17(int n){
+        for (int i=0; i<n; i++){
+            for (int j=0; j<n-i-1; j++){
+                
+            }
+        }
+    }
 
+    public static int sumNumbers(int n){
+        if (n<=0){
+            return 0;
+        }
+        return n + sumNumbers(n-1);
+    }
 
            
 
@@ -178,7 +191,8 @@ public class Patterns {
         pattern12(4);
         pattern13(5);
         pattern14(5);
-        pattern15(5);*/
-        pattern16(5);
+        pattern15(5);
+        pattern16(5);*/
+        System.out.println(sumNumbers(5));
     }
 }
