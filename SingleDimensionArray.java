@@ -48,13 +48,14 @@ public class SingleDimensionArray {
         System.out.println("Value not found");
     }
 
-    //Delete Value
+    //Delete Value at index
 
-    public static void deleteValue(int valueToDelete){
+    public static void deleteIndex(int indexToDelete){
         try{
-             
+            arr[indexToDelete]=Integer.MIN_VALUE;
+            System.out.println("Value successfully deleted. Current array is "+Arrays.toString(arr));
         } catch (ArrayIndexOutOfBoundsException e){
-
+            System.out.println("Plese enter a valid index");
         }
     }
 
@@ -72,6 +73,8 @@ public class SingleDimensionArray {
         traverseArray();
         //Searching an array has O(n) time complexity and O(1) space complexity
         searchArray(100);
+        //Deleting an element has O(1) time complexity and O(1) space complexity
+        deleteIndex(0);
 
     }
 }
