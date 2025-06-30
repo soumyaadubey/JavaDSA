@@ -1,15 +1,15 @@
 import java.util.Arrays;
 public class SingleDimensionArray {
-    int arr[]= null; 
+    static int arr[]= null; 
 
-    public void createArray(int sizeOfArray){
+    public static void createArray(int sizeOfArray){
         arr= new int[sizeOfArray];
         for (int i=0; i<arr.length;i++){
             arr[i]=Integer.MIN_VALUE;
         }
     }
 
-    public void insertValue(int position, int valueInsert){
+    public static void insertValue(int position, int valueInsert){
         try{
             if (arr[position]==Integer.MIN_VALUE){
                 arr[position]=valueInsert;
@@ -23,12 +23,55 @@ public class SingleDimensionArray {
         }
     }
 
+    //Array Traversal
+
+    public static void traverseArray(){
+        try{
+            for (int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+        } catch(Exception e){
+            System.out.println("Array does not exist");
+        }
+        
+    }
+
+    //Search for an element in an array
+
+    public static void searchArray(int valueToSearch){
+        for (int i=0; i<arr.length; i++){
+            if (arr[i]==valueToSearch){
+                System.out.println("Value is found at " + i);
+                return;
+            }
+        }
+        System.out.println("Value not found");
+    }
+
+    //Delete Value
+
+    public static void deleteValue(int valueToDelete){
+        try{
+             
+        } catch (ArrayIndexOutOfBoundsException e){
+
+        }
+    }
+
     public static void main(String[] args) {
-        SingleDimensionArray sda = new SingleDimensionArray();
-        sda.createArray(10);
-        sda.insertValue(0, 10);
-        sda.insertValue(1, 9);
-        sda.insertValue(10, 10);
+        //Creating array is O(n) time complexity
+        createArray(3);
+        insertValue(0, 10);
+        insertValue(1, 9);
+        insertValue(2, 10);
+        // Accessing element of array is O(1) space and time complexity
+        System.out.println(arr[0]);
+        System.out.println(arr[2]);
+        //Traversing an array has O(n) time complexity and O(1) space complexity
+        System.out.println("Traverse Array");
+        traverseArray();
+        //Searching an array has O(n) time complexity and O(1) space complexity
+        searchArray(100);
 
     }
 }
