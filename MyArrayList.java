@@ -31,9 +31,24 @@ public class MyArrayList {
         while (iterator.hasNext()){
             System.out.println(iterator.next());
         }
-        
-        //Searching an element
 
+        //Searching an element
+        for (int i: numbers){
+            if (i==50){
+                System.out.println("Number "+(i)+" found");
+                break;
+            } 
+        } 
+        
+        //Finding Index
+
+        int n= numbers.indexOf(50);
+        System.out.println(n);
+
+        //Deleting elements
+        numbers.remove(6);
+        numbers.remove(Integer.valueOf(40));
+        System.out.println(numbers);
 
 
 
